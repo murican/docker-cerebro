@@ -1,9 +1,14 @@
 # Cerebro
 
-Based on the official Alpine Base Image this Container Starts Cerebro listening on default port 9000
+Cerebro Container based on the official Alpine Base Image
+
+This Image is smaller than the "yannart/cerebro" image
 
 Cerebro:
 https://github.com/lmenezes/cerebro
+
+Yannart:
+https://hub.docker.com/r/yannart/cerebro/
 
 Build:
 ```bash
@@ -12,11 +17,13 @@ $ docker build -t cerebro .
 
 Run:
 ```bash
-$ docker run -p 9000:9000 -d cerebro
+$ docker run --rm -d -p 9000:9000 cerebro
 ```
 
 ## Environment Variables
 
 |         Env         |      Description           | Default       |
 | ------------------- | -------------------------- | ------------- |
-|`VERSION`            | The Cerebro Version        | 0.8.1         |
+| `CEREBRO_VERSION`   | Cerebro Version to be build| 0.8.1         |
+| `JAVA_VERSION`      | Java Version for build     | 8u171         |
+| `JAVA_ALPINE_VERSION` | Java Version for build   | 8.171.11-r2 |
