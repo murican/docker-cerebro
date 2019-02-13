@@ -1,8 +1,8 @@
 # Cerebro
 
-Cerebro Container based on the official Alpine Base Image
+Build a Cerebro Docker Image based on the official Alpine Base Image
 
-This Image is smaller than the "yannart/cerebro" image
+The Image size is smaller than "yannart/cerebro"
 
 Cerebro:
 https://github.com/lmenezes/cerebro
@@ -25,5 +25,5 @@ $ docker run --rm -d -p 9000:9000 cerebro
 |         Env         |      Description           | Default       |
 | ------------------- | -------------------------- | ------------- |
 | `CEREBRO_VERSION`   | Cerebro Version to be build| 0.8.1         |
-| `JAVA_VERSION`      | Java Version for build     | 8u171         |
-| `JAVA_ALPINE_VERSION` | Java Version for build   | 8.171.11-r2 |
+| `JAVA_VERSION`      | Java Version for build     | 8u191         |
+| `JAVA_ALPINE_VERSION` | Java Version for build   | 8.191.12-r0 |
