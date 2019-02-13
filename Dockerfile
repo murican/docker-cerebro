@@ -2,8 +2,8 @@ FROM alpine:latest
 MAINTAINER Jens Schneider <murican87@gmail.com>
 
 ARG CEREBRO_VERSION=0.8.1
-ARG JAVA_VERSION=8u171
-ARG JAVA_ALPINE_VERSION=8.171.11-r2
+ARG JAVA_VERSION=8u191
+ARG JAVA_ALPINE_VERSION=8.191.12-r0
 
 ENV LANG C.UTF-8
 ENV JAVA_HOME /usr/lib/jvm/java-1.8-openjdk
@@ -25,10 +25,10 @@ RUN set -x \
     openjdk8="$JAVA_ALPINE_VERSION" \
   && [ "$JAVA_HOME" = "$(docker-java-home)" ]
 
-RUN mkdir /usr/local/share/cerebro \
-  && wget -qO /tmp/cerebro.tgz  https://github.com/lmenezes/cerebro/releases/download/v${CEREBRO_VERSION}/cerebro-${CEREBRO_VERSION}.tgz \
-  && tar xvzf /tmp/cerebro.tgz -C /usr/local/share/cerebro/ \
-  && rm -f /tmp/cerebro.tgz
+RUN mkdir /usr/local/share/cerebro
+RUN wget -qO /tmp/cerebro.tgz  https://github.com/lmenezes/cerebro/releases/download/v${CEREBRO_VERSION}/cerebro-${CEREBRO_VERSION}.tgz
+RUN tar xvzf /tmp/cerebro.tgz -C /usr/local/share/cerebro/
+RUN rm -f /tmp/cerebro.tgz
 
 ENV CEREBRO_VERSION $CEREBRO_VERSION
 EXPOSE 9000
