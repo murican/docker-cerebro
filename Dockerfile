@@ -24,10 +24,10 @@ RUN set -x \
     openjdk8="$JAVA_ALPINE_VERSION" \
   && [ "$JAVA_HOME" = "$(docker-java-home)" ]
 
-RUN mkdir /usr/local/share/cerebro
-RUN wget -qO /tmp/cerebro.tgz  https://github.com/lmenezes/cerebro/releases/download/v${CEREBRO_VERSION}/cerebro-${CEREBRO_VERSION}.tgz
-RUN tar xvzf /tmp/cerebro.tgz -C /usr/local/share/cerebro/
-RUN rm -f /tmp/cerebro.tgz
+RUN mkdir /usr/local/share/cerebro \
+  && wget -qO /tmp/cerebro.tgz  https://github.com/lmenezes/cerebro/releases/download/v${CEREBRO_VERSION}/cerebro-${CEREBRO_VERSION}.tgz \
+  && tar xvzf /tmp/cerebro.tgz -C /usr/local/share/cerebro/ \
+  && rm -f /tmp/cerebro.tgz
 
 ENV CEREBRO_VERSION $CEREBRO_VERSION
 EXPOSE 9000
