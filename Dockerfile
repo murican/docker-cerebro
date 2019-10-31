@@ -2,7 +2,7 @@ FROM alpine:latest
 MAINTAINER Jens Schneider <murican87@gmail.com>
 
 ARG CEREBRO_VERSION=0.8.4
-ARG JAVA_ALPINE_VERSION=8.212.04-r0
+ARG JAVA_ALPINE_VERSION=8.222.10-r1
 
 ENV LANG C.UTF-8
 ENV JAVA_HOME /usr/lib/jvm/java-1.8-openjdk
