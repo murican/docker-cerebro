@@ -24,5 +24,5 @@ $ docker run --rm -d -p 9000:9000 cerebro
 
 |         Env         |      Description           | Default       |
 | ------------------- | -------------------------- | ------------- |
-| `CEREBRO_VERSION`   | Cerebro Version to be build| 0.8.4         |
-| `JAVA_ALPINE_VERSION` | Java Version for build   | 8.222.10-r1   |
+| `CEREBRO_VERSION`   | Cerebro Version to be build| 0.8.5         |
+| `JAVA_ALPINE_VERSION` | Java Version for build   | 8.242.08-r0   |
