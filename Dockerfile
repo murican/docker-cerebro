@@ -2,11 +2,11 @@ FROM alpine:latest
 MAINTAINER Jens Schneider <murican87@gmail.com>
 
 ARG CEREBRO_VERSION=0.9.2
-ARG JAVA_ALPINE_VERSION=8.242.08-r0
+ARG JAVA_ALPINE_VERSION=11.0.9_p11-r0
 
 ENV LANG C.UTF-8
-ENV JAVA_HOME /usr/lib/jvm/java-1.8-openjdk
-ENV PATH $PATH:/usr/lib/jvm/java-1.8-openjdk/jre/bin:/usr/lib/jvm/java-1.8-openjdk/bin
+ENV JAVA_HOME /usr/lib/jvm/java-11-openjdk
+ENV PATH $PATH:/usr/lib/jvm/java-11-openjdk/jre/bin:/usr/lib/jvm/java-11-openjdk/bin
 
 RUN echo 'http://dl-cdn.alpinelinux.org/alpine/latest-stable/community' >> /etc/apk/repositories
 RUN apk update && apk add --no-cache wget unzip gzip bash
@@ -21,7 +21,7 @@ RUN { \
 
 RUN set -x \
   && apk add --no-cache \
-    openjdk8="$JAVA_ALPINE_VERSION" \
+    openjdk11="$JAVA_ALPINE_VERSION" \
   && [ "$JAVA_HOME" = "$(docker-java-home)" ]
 
 RUN mkdir /usr/local/share/cerebro \
