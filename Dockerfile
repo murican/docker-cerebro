@@ -8,8 +8,8 @@ ENV LANG C.UTF-8
 ENV JAVA_HOME /usr/lib/jvm/java-1.8-openjdk
 ENV PATH $PATH:/usr/lib/jvm/java-1.8-openjdk/jre/bin:/usr/lib/jvm/java-1.8-openjdk/bin
 
-RUN echo 'http://dl-cdn.alpinelinux.org/alpine/edge/community' >> /etc/apk/repositories
-RUN apk add --no-cache wget unzip gzip bash
+RUN echo 'http://dl-cdn.alpinelinux.org/alpine/latest-stable/community' >> /etc/apk/repositories
+RUN apk update && apk add --no-cache wget unzip gzip bash
 
 RUN { \
     echo '#!/bin/sh'; \
