@@ -1,8 +1,8 @@
 FROM alpine:latest
 MAINTAINER Jens Schneider <murican87@gmail.com>
 
-ARG CEREBRO_VERSION=0.9.2
-ARG JAVA_ALPINE_VERSION=11.0.9_p11-r0
+ARG CEREBRO_VERSION=0.9.3
+ARG JAVA_ALPINE_VERSION=11.0.9_p11-r1
 
 ENV LANG C.UTF-8
 ENV JAVA_HOME /usr/lib/jvm/java-11-openjdk
